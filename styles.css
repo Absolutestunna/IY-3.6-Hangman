@@ -36,6 +36,16 @@ body{
   padding-left: 3px;
   letter-spacing: 10px;
 }
+.guessed {
+  font-size: 50px;
+  text-align: right;
+
+}
+
+#guessed-letters{
+  font-size: 40px;
+  color: red;
+}
 .disp-Cont{
   text-align: left;
   margin-top: 20px;

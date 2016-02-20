@@ -2,7 +2,8 @@
 var letterButton = document.querySelector(".letters");
 var displayBox = document.querySelector("#display");
 var answerBox = document.querySelector(".answer-spaces");
-var trialBox = document.querySelector("#trial-num")
+var trialBox = document.querySelector("#trial-num");
+var guessedBox = document.querySelector("#guessed-letters");
 var listItems = "";
 var counter = 0;
 var wordRandom = "";
@@ -28,6 +29,7 @@ function randomWords(){
     answerBox.textContent = listItems;
 
   });
+
 }
 
 
@@ -56,6 +58,8 @@ function displayLetter(e){
   if (wordRandomSplit.indexOf(sel_word) == -1){
     missed--;
     trialBox.textContent = missed;
+    console.log(sel_word);
+    guessedBox.textContent += sel_word + " ";
   }
 
   if (missed == 0){
