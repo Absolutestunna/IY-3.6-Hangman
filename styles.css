@@ -49,3 +49,13 @@ body{
 #answer-space {
   letter-spacing: 15px;
 }
+.trials {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 60px;
+}
+#trials-left {
+  font-size: 60px;
+  margin-top: 20px;
+
+}

@@ -2,10 +2,14 @@
 var letterButton = document.querySelector(".letters");
 var displayBox = document.querySelector("#display");
 var answerBox = document.querySelector(".answer-spaces");
+var trialBox = document.querySelector("#trial-num")
 var listItems = "";
 var counter = 0;
 var wordRandom = "";
+var wordRandomSplit;
 var listItemsArray;
+var flag;
+var missed = 8;
 var selectArray = commonWords.filter(function(value){
     return value.length >=3;
  });
@@ -18,7 +22,7 @@ var selectArray = commonWords.filter(function(value){
 
 function randomWords(){
   wordRandom += (selectArray[Math.floor(Math.random()*selectArray.length-1)]);
-  var wordRandomSplit = wordRandom.split("");
+  wordRandomSplit = wordRandom.split("");
   wordRandomSplit.forEach(function(value){
     listItems += "_";
     answerBox.textContent = listItems;
@@ -29,40 +33,34 @@ function randomWords(){
 
 function displayLetter(e){
   var sel_word = e.target.id;       //clicked letter
-  for (var i=0; i<wordRandom.length; i++){
-    if (wordRandom[i] == sel_word){
-      counter = wordRandom.indexOf(wordRandom[i]);
-      listItems = listItems.split("");
-      listItems[counter] = sel_word;
-      listItems = listItems.join("");
+  listItemsArray = listItems.split("");
+  wordRandomSplit.forEach(function(element, index){
+    if (sel_word == element){
+      listItemsArray[index] = sel_word;
+      listItems = listItemsArray.join("")
       answerBox.textContent = listItems;
-      console.log(listItems);
-      // break;
-    } else {
 
     }
+  })
+  console.log(listItems)
+
+//   for (var i=0; i<wordRandom.length; i++){
+//     if (wordRandom[i] === sel_word){
+//       counter = wordRandom.indexOf(wordRandom[i]);
+//       listItems = listItems.split("");
+//       listItems[counter] = sel_word;
+//       listItems = listItems.join("");
+//       answerBox.textContent = listItems;
+//     }
+//   }
+  if (wordRandomSplit.indexOf(sel_word) == -1){
+    missed--;
+    trialBox.textContent = missed;
   }
 
-
-  // listItems.charAt(counter) = sel_word;
-  // console.log(listItems.charAt(counter) = "sel_word");
-
-  // var wordRandomSplit = wordRandom.split("");
-  // listItemsArray = listItems.split("").filter(function(value){
-  //   return value != " ";
-  // })
-  // wordRandomSplit.map(function(value){
-  //   if (value == sel_word){
-  //     counter = wordRandomSplit.indexOf(value);
-  //
-  //     listItemsArray[counter] = value;
-  //     answerBox.textContent = listItemsArray.join();
-  //
-  //   }
-  // })
-  // console.log(listItemsArray)
-
-
+  if (missed == 0){
+    alert("Game Over")
+  }
 }
 
 
