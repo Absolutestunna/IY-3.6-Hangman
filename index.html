@@ -21,10 +21,9 @@
         </div>
 
         <div class="col-md-6 guessed">
-          <div class="row">
             <div id="guessed-info">Guessed letters</div>
-            <span id="guessed-letters"></span>
-          </div>  
+            <div id="guessed-letters"></div>
+
         </div>
       </div>
 
@@ -35,7 +34,9 @@
         <div class="col-md-6 trials">
           <span id="trial-num">8 </span>
           <span id="trials-left">trials left</span>
-
+          <audio src="http://free-sounds.net/sound-files/special-effects/VICTORY.WAV"           id="win">
+          </audio>
+          <audio src="http://free-sounds.net/sound-files/special-effects/SHUTDOWN.WAV" id="lose"></audio>
         </div>
       </div>
 
@@ -79,6 +80,10 @@
 
     <script type="text/javascript" src="words.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js">
+
+    </script>
+
 
   </body>
 </html>
