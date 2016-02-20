@@ -36,10 +36,10 @@ function displayLetter(e){
       listItems[counter] = sel_word;
       listItems = listItems.join("");
       answerBox.textContent = listItems;
-      console.log(listItems)
-      break;
+      console.log(listItems);
+      // break;
     } else {
-      
+
     }
   }
 
