@@ -26,7 +26,7 @@ body{
 .display {
   width: 120px;
   height: 350px;
-  background-color: green;
+  /*background-color: green;*/
   text-align: right;
 }
 #display_words {
@@ -72,4 +72,12 @@ body{
   margin-top: 20px;
   display: inline-block;
 
+}
+#actual-answer {
+  margin-top: 25px;
+}
+#celebrate {
+  background-color: none;
+  height: 100%;
+  width: 100%;
 }
