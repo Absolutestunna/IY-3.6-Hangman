@@ -1,0 +1,100 @@
+/* Bootstrap Variables */
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/* Import Bootstrap */
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body{
+  margin: 0;
+  padding: 0
+}
+.container {
+  max-width: 1120px;
+  margin: 10px auto;
+
+}
+.header {
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: bolder;
+  font-size: 50px;
+  font-family: 'Knewave', cursive;
+}
+.display {
+  width: 120px;
+  height: 350px;
+  text-align: right;
+
+  #giffy{
+    float: left;
+  }
+}
+
+
+.guessed {
+  font-size: 50px;
+  text-align: right;
+
+    #guessed-letters {
+      font-size: 40px;
+      color: red;
+    }
+    #actual-answer {
+      font-weight: lighter;
+      margin-top: 25px;
+    }
+}
+
+.disp-Cont{
+  text-align: left;
+  margin-top: 20px;
+  .answer-spaces {
+    font-size: 60px;
+    font-style: bold;
+
+  }
+  #answer-space {
+    letter-spacing: 15px;
+  }
+}
+
+.trials {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 60px;
+
+    #trial-num {
+      display: inline-block;
+    }
+
+    #trials-left {
+      font-size: 60px;
+      margin-top: 20px;
+      display: inline-block;
+
+    }
+}
+
+
+.letters{
+  margin-top: 30px;
+
+   button {
+    width: 37.6px;
+    height: 40px;
+    background-color: green;
+    color: red;
+  }
+}
+
+
+
+
+// #display_words {
+//   font-size: 30px;
+//   text-align: center;
+//   padding-right: 3px;
+//   padding-left: 3px;
+//   letter-spacing: 10px;
+// }

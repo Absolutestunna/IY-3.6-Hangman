@@ -22,6 +22,7 @@ function startGame(){
     var wordRandomSplit;
     var listItemsArray;
     var flag = 0;
+    var trial_flag = 0;
     var missed = 8;
     var filtered;
     var selectArray = commonWords.filter(function(value){
@@ -47,8 +48,10 @@ function startGame(){
     function playsound(){
       sound_audio.play();
     }
-    function cel_gif(){
-      document.getElementById('giffy').src = "<http://giphy.com/gifs/celebrate-7L1ajufDwttn2";
+    function trial_gif(){
+      trial_flag++;
+      giffy.src = "hang/hang"+trial_flag+".gif";
+      console.log(giffy.src);
 
     }
     function lose(){
@@ -72,7 +75,6 @@ function startGame(){
           // alert("You Win!!");
           actualAnswerBox.style.color = "teal";
           actualAnswerBox.textContent = "CONGRATULATIONS. YOU WIN!!";
-          cel_gif();
           setInterval(function(){
             window.location.reload(true);
           }, 4000)
@@ -98,6 +100,7 @@ function startGame(){
         missed--;
         trialBox.textContent = missed;
         guessedBox.textContent += sel_word + " ";
+        trial_gif();
       }
       if (missed <= 0){
         missed = 0;

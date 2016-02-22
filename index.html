@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Hangman</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
   <body>
@@ -15,12 +16,9 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-6 display"> <!--gifs and wrong answers go here-->
-          <!-- <span id="display_words"></span> -->
-          <!-- <img src="" id="celebrate"> -->
-          <iframe src="" width="100%" height="100%" id="giffy"></iframe>
-
+      <div class="row"> <!--gifs and wrong answers go here-->
+        <div class="col-md-6 display">
+          <img src="hang/hang0.gif" height="100%" width="250px" alt="gifs" id="giffy"/>
         </div>
 
         <div class="col-md-6 guessed">
@@ -42,7 +40,7 @@
           <audio src="http://free-sounds.net/sound-files/special-effects/SHUTDOWN.WAV" id="lose"></audio>
           <audio src="http://soundbible.com/772-Button.html" id="sound"></audio>
 
-          </video>
+        
         </div>
       </div>
 
