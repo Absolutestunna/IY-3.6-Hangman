@@ -5813,7 +5813,8 @@ button.close {
     display: none !important; } }
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #FA9AFF; }
 
 .container {
   max-width: 1120px;
@@ -5824,7 +5825,7 @@ body {
   text-align: center;
   font-style: bolder;
   font-size: 50px;
-  font-family: 'Knewave', cursive; }
+  font-family: 'Ewert', cursive; }
 
 .display {
   width: 120px;
@@ -5836,12 +5837,15 @@ body {
 .guessed {
   font-size: 50px;
   text-align: right; }
+  .guessed #guessed-info {
+    font-family: 'Knewave', cursive; }
   .guessed #guessed-letters {
     font-size: 40px;
     color: red; }
   .guessed #actual-answer {
     font-weight: lighter;
-    margin-top: 25px; }
+    margin-top: 25px;
+    font-family: 'Permanent Marker', cursive; }
 
 .disp-Cont {
   text-align: left;
@@ -5850,25 +5854,30 @@ body {
     font-size: 60px;
     font-style: bold; }
   .disp-Cont #answer-space {
-    letter-spacing: 15px; }
+    letter-spacing: 15px;
+    font-family: 'Knewave', cursive; }
 
 .trials {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: right;
   font-size: 60px; }
   .trials #trial-num {
-    display: inline-block; }
+    display: inline-block;
+    font-family: 'Knewave', cursive; }
   .trials #trials-left {
     font-size: 60px;
     margin-top: 20px;
-    display: inline-block; }
+    display: inline-block;
+    font-family: 'Knewave', cursive; }
 
 .letters {
   margin-top: 30px; }
   .letters button {
     width: 37.6px;
     height: 40px;
-    background-color: green;
-    color: red; }
+    background-color: #6C984F;
+    color: #3D2C22;
+    border-radius: 35%;
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

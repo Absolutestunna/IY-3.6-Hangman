@@ -61,7 +61,7 @@ function startGame(){
       // alert("Sorry, wrong answer. The correct answer is: " + wordRandom)
       setInterval(function(){
         window.location.reload(true);
-      }, 2000)
+      }, 3000)
 
     }
     function win(){
@@ -77,7 +77,7 @@ function startGame(){
           actualAnswerBox.textContent = "CONGRATULATIONS. YOU WIN!!";
           setInterval(function(){
             window.location.reload(true);
-          }, 4000)
+          }, 3000)
         }
       }//END OF WIN FUNCTION
 
