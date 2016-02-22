@@ -13,6 +13,7 @@ function startGame(){
     var sound_audio = document.querySelector("#sound");
     var giffy = document.querySelector("#giffy");
     var actualAnswerBox = document.querySelector("#actual-answer");
+    var click = document.querySelector("#click");
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////GLOBAL VARIABLES///////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -32,7 +33,6 @@ function startGame(){
 
      randomWords();
      letterButton.addEventListener('click', displayLetter);
-     console.log(wordRandom)
  ///////////////////////////////////////////////////////////////////////
  /////////////////////////////FUNCTIONS/////////////////////////////////
  ///////////////////////////////////////////////////////////////////////
@@ -45,43 +45,38 @@ function startGame(){
 
       });
     }
-    function playsound(){
-      sound_audio.play();
-    }
+
     function trial_gif(){
       trial_flag++;
       giffy.src = "hang/hang"+trial_flag+".gif";
-      console.log(giffy.src);
-
     }
     function lose(){
       actualAnswerBox.style.color = "black";
       actualAnswerBox.textContent = "Sorry, wrong answer. The answer is: " + wordRandom;
       lose_audio.play();
-      // alert("Sorry, wrong answer. The correct answer is: " + wordRandom)
       setInterval(function(){
         window.location.reload(true);
-      }, 3000)
+      }, 3000);
 
     }
     function win(){
        filtered = listItems.split("").filter(function(val){
         return val != "_";  //CHOSEN/RIGHT/SELECTED WORDS WITHOUT UNDERSCORE.                                  //CREATED TO COMPARE THE RIGHT WORDS TO RANDOM WORDS SELECTED
-      })
+      });
 
     if (_.isEqual(filtered, listItemsArray)){ //COMPARES RANDOM WORD TO FILTERED      WORDS
-          // $(".answer-spaces").effect("shake", {times: 4}, 3000);
+          $(".answer-spaces").effect("shake", {times: 4}, 500);
           win_audio.play();
-          // alert("You Win!!");
           actualAnswerBox.style.color = "teal";
           actualAnswerBox.textContent = "CONGRATULATIONS. YOU WIN!!";
           setInterval(function(){
             window.location.reload(true);
-          }, 3000)
+          }, 3000);
         }
       }//END OF WIN FUNCTION
 
     function displayLetter(e){
+      click.play();
       var sel_word = e.target.id;       //clicked letter
       e.toElement.disabled = true;
       e.toElement.style.background = "yellow";
@@ -90,7 +85,7 @@ function startGame(){
       wordRandomSplit.forEach(function(element, index){
         if (sel_word == element){
           listItemsArray[index] = sel_word;
-          listItems = listItemsArray.join("")
+          listItems = listItemsArray.join("");
           answerBox.textContent = listItems;
           flag++;
           win();
